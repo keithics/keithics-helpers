@@ -1,6 +1,6 @@
 'use strict';
 
-var keithics-helpers = require('../lib/keithics-helpers.js');
+var khelpers = require('../lib/keithics-helpers.js');
 
 /*
   ======== A Handy Little Mocha Reference ========
@@ -28,9 +28,10 @@ var keithics-helpers = require('../lib/keithics-helpers.js');
 
 var assert = require('assert');
 
-suite('AwesomenessTest', function(){
-  test('#awesome()', function(done){
-    assert.equal(keithics-helpers.awesome(), 'awesome');
-    done();
+describe('KeithicsTest', function(){
+  describe('#randomString(5)', function(){
+    it('should return a random string', function(){
+      assert.equal('aaaaa',khelpers.randomString(5,'a'));
+  });  
   });
 });
