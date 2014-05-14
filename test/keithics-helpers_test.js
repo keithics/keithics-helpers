@@ -32,6 +32,14 @@ describe('KeithicsTest', function(){
   describe('#randomString(5)', function(){
     it('should return a random string', function(){
       assert.equal('aaaaa',khelpers.randomString(5,'a'));
-  });  
+    });  
   });
+
+  describe('#ellipsize(str, 32, .5)', function(){
+    it('should split a string at a defined maximum length, and insert an ellipsis', function(){
+      var str = 'this_string_is_entirely_too_long_and_might_break_my_design.jpg';
+      assert.equal('this_string_is_e&hellip;ak_my_design.jpg',khelpers.ellipsize(str, 32, .5));
+    });  
+  });
+
 });
